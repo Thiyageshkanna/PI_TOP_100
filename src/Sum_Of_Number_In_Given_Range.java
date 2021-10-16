@@ -6,6 +6,7 @@ public class Sum_Of_Number_In_Given_Range {
         int start=scn.nextInt();
         int end=scn.nextInt();
         int result=0;
+
         for(int i=start;i<=end;i++){
             result+=start;
             start++;
