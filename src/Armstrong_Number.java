@@ -3,19 +3,20 @@ import java.util.Scanner;
 public class Armstrong_Number {
     public static void main(String[] args) {
         Scanner scn=new Scanner(System.in);
-        int number =scn.nextInt();
-        int userInput=number;
+        int start=scn.nextInt();
+        int end=scn.nextInt();
         int totalSum=0;
-        while(number>0){
-            int lastDigit=number%10;
-            totalSum+=lastDigit*lastDigit*lastDigit;
-            number/=10;
+        for(int i= start;i<=end;i++){
+            int check=i;
+            while (check>0){
+                int lastDigit=check%10;
+                totalSum+=lastDigit*lastDigit*lastDigit;
+                check/=10;
+            }
+            if(totalSum==i){
+                System.out.print(i+" ");
+            }
         }
-        if(userInput==totalSum){
-            System.out.println("The given Number is Armstrong");
-        }
-        else{
-            System.out.println("The given Number is not a Armstrong Number");
-        }
+
     }
 }
