@@ -23,15 +23,20 @@ public class Highest_Common_Factor {
         int num1=scn.nextInt();
         int num2=scn.nextInt();
         int min=Math.min(num1,num2);
+        boolean hcfValue=false;
+        int hcf=0;
         for(int i=2;i<=min;i++){
             if(num1%i==0 && num2%i==0 ){
-                System.out.println("The HCF of given two number is "+i);
+                hcf=i;
+                hcfValue=true;
                 break;
             }
-            else{
-                System.out.println("The given two number doesn't have HCF");
-                break;
-            }
+        }
+        if(hcfValue){
+            System.out.println("The HCF of given two number is "+ hcf);
+        }
+        else{
+            System.out.println("The given two number doesn't have HCF value");
         }
 
     }
