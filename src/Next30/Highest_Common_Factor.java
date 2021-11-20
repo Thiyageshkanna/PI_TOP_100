@@ -32,6 +32,7 @@ public class Highest_Common_Factor {
                 break;
             }
         }
+
         if(hcfValue){
             System.out.println("The HCF of given two number is "+ hcf);
         }
