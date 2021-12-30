@@ -12,11 +12,14 @@ public class Longest_Palindrome_In_Array {
         for(int i=0;i<length;i++){
             arr[i]=scn.nextInt();
         }
+//        Final answer
         int ans=longestPalindrome(arr,length);
         System.out.println(ans);
     }
 
+//    Sort the elements and take the last element and check with isPalindrome Function
     private static int longestPalindrome(int[] arr, int length) {
+//        Sorting the elements
         for(int i=0;i<length;i++){
             for(int j=i+1;j<length;j++){
                 if(arr[i]>arr[j]){
@@ -26,15 +29,16 @@ public class Longest_Palindrome_In_Array {
                 }
             }
         }
-        for(int i=length-1;i<length;i++){
+//        checking with is palindrome From last
+        for(int i=length-1;i>=0;i--){
             if (isPalindrome(arr[i])) {
                 return arr[i];
             }
-
         }
         return -1;
     }
 
+//    Check Whether the current element is palindrome or not
     private static boolean isPalindrome(int i) {
         int temp=i;
         int sum=0;
